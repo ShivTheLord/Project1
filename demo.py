@@ -16,7 +16,7 @@ with open(classFile,'rt') as f:
     classNames = f.read().rstrip('\n').split('\n')
 
 configPath = 'ssd_mobilenet_v3_large_coco_2020_01_14.pbtxt'		#NETWORK CONFIGURATION
-weightsPath = 'frozen_inference_graph.pb'						#TRAINED WEIGHTS
+weightsPath = 'frozen_inference_graph.pb'				#TRAINED WEIGHTS
 
 net = cv2.dnn_DetectionModel(weightsPath,configPath)
 net.setInputSize(320,320)
